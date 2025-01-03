@@ -8,11 +8,21 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-
+    
+    @IBOutlet var cityNameLabel: UILabel!
+    @IBOutlet var tempLabel: UILabel!
+    @IBOutlet var weatherDescriptionLabel: UILabel!
+    
+    var cityName = ""
+    var temp = 0.0
+    var weatherDescription = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        cityNameLabel.text = cityName
+        tempLabel.text = String(temp.rounded())
+        weatherDescriptionLabel.text = weatherDescription
     }
     
 
